@@ -2,13 +2,12 @@
 body {
 	background-color: lightblue;
 	text-align: center;
-	font: "Times New Roman";
+	font-family: "Times New Roman";
 	color: navy;
 }
 
 p {
-    margin: 10px, 150px;
-    font-weight: bold;
+    margin: 10px 150px;
 }
 
 ul {
@@ -18,8 +17,8 @@ ul {
 
 
 img {
-	width: 40%;
-	height: 50%;
+	width: 50%;
+	height: 60%;
 	border-style: double;
 }
 
