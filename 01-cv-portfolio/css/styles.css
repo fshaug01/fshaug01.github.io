@@ -3,16 +3,11 @@
 ====================================================
 
 * 	[Master Stylesheet]
-	
-	Theme Name :  
-	Version    :  
-	Author     :  
-	Author URI :  
 
 ====================================================
 
 	TOC
-	
+
 	1. PRIMARY STYLES
 	2. COMMONS FOR PAGE DESIGN
 	3. HEADER
@@ -23,6 +18,7 @@
 	8. EDUCATION SECTION
 	9. COUNTER SECTION
 	10. FOOTER
+	11. ANIMATIONS
 
 ====================================================
 
@@ -31,12 +27,11 @@
 1. PRIMARY STYLES
 --------------------------------- */
 
-html{ font-size: 100%; height: 100%; overflow-x: hidden; margin: 0px;  padding: 0px; touch-action: manipulation; }
-
+html{ font-size: 100%; height: 100%; overflow-x: hidden; margin: 0px; padding: 0px; touch-action: manipulation; }
 
 body{ font-size: 16px; font-family: 'Poppins', serif; width: 100%; height: 100%; margin: 0; font-weight: 400;
-	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word; 
-	color: #333; }
+	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word;
+	color: #2D3436; background: #FAFAFA; }
 
 h1, h2, h3, h4, h5, h6, p, a, ul, span, li, img, inpot, button{ margin: 0; padding: 0; }
 
@@ -44,21 +39,21 @@ h1,h2,h3,h4,h5,h6{ line-height: 1.5; font-weight: inherit; }
 
 h1,h2,h3{ font-family: 'Poppins', cursive; }
 
-p{ line-height: 1.6; font-size: 1.05em; font-weight: 400; color: #777; }
+p{ line-height: 1.7; font-size: 1.05em; font-weight: 400; color: #666; }
 
 h1{ font-size: 4em; line-height: 1; }
-h2{ font-size: 2.2em; line-height: 1.1; }
+h2{ font-size: 2.4em; line-height: 1.1; }
 h3{ font-size: 1.8em; }
 h4{ font-size: 1.3em; }
 h5{ font-size: 1em; }
 h6{ font-size: .9em; letter-spacing: 1px; }
 
-a, button{ display: inline-block; text-decoration: none; color: inherit; line-height: 1; 
-	-webkit-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
+a, button{ display: inline-block; text-decoration: none; color: inherit; line-height: 1;
+	-webkit-transition: all .3s ease; transition: all .3s ease; }
 
 a:focus, a:active, a:hover,
 button:focus, button:active, button:hover,
-a b.light-color:hover{ text-decoration: none; color: #00AEFF; }
+a b.light-color:hover{ text-decoration: none; color: #00B4D8; }
 
 b{ font-weight: 600; }
 
@@ -82,13 +77,15 @@ b.max-bold{ font-weight: 700; }
 2. COMMONS FOR PAGE DESIGN
 --------------------------------- */
 
-.section{ padding: 100px 0 50px; }
+.section{ padding: 60px 0 40px; }
 
-.section .heading{ margin-bottom: 60px; }
+.section .heading{ margin-bottom: 30px; }
 
-.section .heading:before{ content:''; height: 10px; width: 50px; border-radius: 5px;
-	margin-bottom: 20px; display: block; background: #00AEFF; }
-	
+.section .heading:before{ content:''; height: 4px; width: 40px; border-radius: 2px;
+	margin-bottom: 20px; display: block; background: #00B4D8; }
+
+.section .heading h3{ letter-spacing: -0.5px; }
+
 .margin-t-10{ margin-top: 10px; }
 
 .margin-b-30{ margin-bottom: 30px; }
@@ -96,9 +93,11 @@ b.max-bold{ font-weight: 700; }
 
 .margin-tb-30{ margin-top: 30px; margin-bottom: 30px; }
 
-.font-yellow{ color: #00AEFF; }
+.margin-tb-10{ margin-top: 10px; margin-bottom: 10px; }
 
-.font-semi-white{ color: #ddd; }
+.font-yellow{ color: #00B4D8; }
+
+.font-semi-white{ color: #ccd6dd; }
 
 .font-lite-black{ color: #999; }
 
@@ -109,7 +108,7 @@ b.max-bold{ font-weight: 700; }
 
 header{ position: absolute; top: 30px; left: 0; right: 0; z-index: 100; }
 
-header .heading-wrapper{ border-radius: 5px; padding: 30px 40px 20px; background: #00AEFF; color: #fff; }
+header .heading-wrapper{ border-radius: 5px; padding: 30px 40px 20px; background: #00B4D8; color: #fff; }
 
 header .info{ margin-bottom: 10px; }
 
@@ -118,7 +117,7 @@ header .info .icon{ float: left; font-size: 25px; }
 header .info .right-area{ margin-left: 45px; }
 
 header .downlad-btn{ padding: 15px 30px; border-radius: 4px; float: right; margin-top: 30px;
-	box-shadow: inset 0 0px 4px rgba(0,0,0,.3); background: #00AEFF; color: #fff; 
+	box-shadow: inset 0 0px 4px rgba(0,0,0,.3); background: #00B4D8; color: #fff;
 	-webkit-transition: all .2s ease; transition: all .2s ease; }
 
 header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: translateY(-4px); }
@@ -128,54 +127,112 @@ header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: trans
 4. INTRO SECTION
 --------------------------------- */
 
-.intro-section{ padding-top: 200px; position: relative; background-size: cover; 
-	z-index: 1;background-image: url(../../images/Boston.jpg); }
+.intro-section{ padding-top: 50px; padding-bottom: 40px; position: relative;
+	background: #1a3a4a; }
 
-.intro-section:before{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; 
-	right: 0; background: rgba(0,0,0, .2); }
-	
-.intro-section:after{ content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-	height: 150px; z-index: -1; background: #fff; }
+.intro-section:after{ display: none; }
 
-.intro{ padding: 0 20px; margin-top: 100px; text-align: center; background: #fff; }
+.intro{ padding: 30px 40px 25px; margin-top: 0; text-align: center; background: none; color: #fff; }
 
-.intro .profile-img{ height: 200px; width: 200px; border-radius: 100px; margin: 0 auto; 
-	overflow: hidden; position: relative; top: -100px; margin-bottom: -70px;  }
+.intro .profile-img{ height: 130px; width: 130px; border-radius: 65px; margin: 0 auto 18px;
+	overflow: hidden; position: relative; border: 3px solid rgba(255,255,255,0.3);
+	box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
 
-.intro .information > li{ display: block; margin: 5px 0; }
+.intro h2{ margin-bottom: 4px; letter-spacing: -0.5px; color: #fff; }
 
-.intro .social-icons > li > a{ height: 35px; line-height: 35px; width: 35px; border-radius: 20px; 
-	overflow: hidden; z-index: 1; position: relative; margin: 0 5px 5px; background: #0077B5; color: #fff; }
+.intro .font-yellow{ font-weight: 500; margin-bottom: 6px; color: #00B4D8; }
+
+.intro-subtitle{ color: rgba(255,255,255,0.6); font-size: 0.9em; margin-bottom: 16px; }
+
+
+.intro .social-icons > li > a{ height: 38px; line-height: 38px; width: 38px; border-radius: 19px;
+	overflow: hidden; z-index: 1; position: relative; margin: 0 5px 5px; background: rgba(255,255,255,0.15); color: #fff;
+	font-size: 16px; }
 
 .intro .social-icons > li > a:after{ content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-	top: 0; z-index: -1; border-radius: 20px; background: #0077B5; 
-	-webkit-transition: all .2s ease; transition: all .2s ease;
+	top: 0; z-index: -1; border-radius: 20px; background: #00B4D8;
+	-webkit-transition: all .3s ease; transition: all .3s ease;
 	-webkit-transform: scale(0); transform: scale(0); }
 
 .intro .social-icons > li > a:hover:after{ -webkit-transform: scale(1); transform: scale(1); }
+
+.intro .social-icons > li > a:hover{ color: #fff; }
 
 
 /* ---------------------------------
 5. PORFOLIO SECTION
 --------------------------------- */
 
-.portfolio-section{ padding-bottom: 0; }
+.portfolio-section{ padding-bottom: 50px; background: #fff; }
 
-.portfolio-section .portfolioFilter{ margin-top: 60px; color: #666; }
+.portfolio-section .card-row{
+	display: flex;
+	flex-wrap: wrap;
+}
 
-.portfolio-section .portfolioFilter a{ margin: 10px 10px 0 0; }
+.portfolio-section .card-row > div{
+	display: flex;
+}
 
-.portfolio-section .portfolioFilter a.current{  color: #00AEFF; }
+.project-card{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+	transition: transform 0.3s, box-shadow 0.3s;
+	margin-bottom: 30px;
+	text-decoration: none;
+	color: inherit;
+	background: #fff;
+}
 
-.portfolio-section .portfolioContainer{ margin-left: -15px; margin-right: -15px; }
+.project-card:hover{
+	transform: translateY(-8px);
+	box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+	text-decoration: none;
+	color: inherit;
+}
 
-.portfolio-section .p-item{ width: 33.333%; padding: 0 7.5px 0px; margin-top: 15px; }
+.card-img{
+	min-height: 220px;
+	max-height: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f5f5f5;
+	flex-shrink: 0;
+	border-bottom: 1px solid #f0f0f0;
+}
 
-.portfolio-section .p-item a{ display: inline; }
+.card-img img{
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
 
-.portfolio-section .p-item.p-item-2 .img:first-child{ float: left; width: 50%; padding-right: 7.5px; }
+.card-body{
+	padding: 24px;
+	background: #fff;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
 
-.portfolio-section .p-item.p-item-2 .img:last-child{ float: right; width: 50%; padding-left: 7.5px; }
+.card-body h4{
+	font-size: 14px;
+	margin-bottom: 10px;
+	min-height: 40px;
+	letter-spacing: 0.5px;
+}
+
+.card-body p{
+	font-size: 13px;
+	color: #888;
+	margin: 0;
+	line-height: 1.6;
+}
 
 
 /* ---------------------------------
@@ -184,7 +241,7 @@ header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: trans
 
 .radial-progress{ position: relative; max-width: 200px; margin: 0 auto; }
 
-.radial-progress .progressbar-text{ font-size: 2.2em; font-weight: 500; 
+.radial-progress .progressbar-text{ font-size: 2.2em; font-weight: 500;
 	padding-bottom: 25px!important; color: #333!important; }
 
 .radial-progress .progressbar-text:after{ content:'%'; }
@@ -192,71 +249,283 @@ header .downlad-btn:hover{ -webkit-transform: translateY(-4px); transform: trans
 .radial-progress .progress-title{ position: absolute; top: 50%; left: 50%; width: 100%;
 	letter-spacing: 0; text-align: center; transform: translate(-50%, 15px); color: #777; }
 
-	
+
 
 /* ---------------------------------
 7. EXPERIENCE SECTION
 --------------------------------- */
 
-.experience-section{ background: #16435e; color: #fff; }
+.experience-section{ background: #1a3a4a; color: #fff; padding-bottom: 60px; overflow-x: auto; }
 
-.experience .list > li{ display: block; position: relative; margin-bottom: 10px; padding-left: 20px; }
+.experience-section .heading:before{ background: rgba(255,255,255,0.4); }
 
-.experience .list > li:before{ content: ''; position: absolute; top: 50%; left: 0; height: 10px; 
-	width: 10px; margin-top: -5px; display: block; border-radius: 10px; border: 2px solid #fff; }
+.experience{ margin-bottom: 50px; }
 
-	
+.experience h4{ margin-bottom: 8px; }
+
+.experience h5{ margin-bottom: 6px; }
+
+.experience .font-semi-white{ color: #ccd6dd; }
+
+.exp-timeline{
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	padding-top: 20px;
+	min-width: max-content;
+}
+
+/* Horizontal line running through all dots */
+.exp-timeline:before{
+	content: '';
+	position: absolute;
+	top: 27px;
+	left: 20px;
+	right: 20px;
+	height: 3px;
+	background: linear-gradient(90deg, #00B4D8, #80daf0);
+	border-radius: 2px;
+}
+
+.exp-stop{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 0 0 160px;
+	position: relative;
+}
+
+/* Dot sitting on the line */
+.exp-dot{
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fff;
+	border: 3px solid #00B4D8;
+	z-index: 2;
+	flex-shrink: 0;
+	transition: all 0.3s;
+	position: relative;
+}
+
+.exp-stop:first-child .exp-dot{
+	background: #00B4D8;
+	box-shadow: 0 0 0 5px rgba(0,180,216, .2);
+}
+
+.exp-stop:hover .exp-dot{
+	background: #00B4D8;
+	transform: scale(1.3);
+	box-shadow: 0 0 0 6px rgba(0,180,216, .25);
+}
+
+/* Vertical stem connecting dot to card */
+.exp-connector{
+	width: 2px;
+	height: 24px;
+	background: #00B4D8;
+	opacity: 0.4;
+	flex-shrink: 0;
+}
+
+.exp-stop:hover .exp-connector{
+	opacity: 1;
+}
+
+/* Card below the connector */
+.exp-card{
+	background: #f8fbfd;
+	border: 1px solid #e8f0f4;
+	border-radius: 10px;
+	padding: 16px 14px;
+	text-align: center;
+	width: 140px;
+	transition: all 0.3s;
+}
+
+.exp-stop:hover .exp-card{
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(0,180,216, .15);
+	border-color: #00B4D8;
+	background: #fff;
+}
+
+.exp-year{
+	display: block;
+	font-size: 0.65em;
+	font-weight: 700;
+	color: #00B4D8;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #e8f0f4;
+}
+
+.exp-company{
+	color: #2D3436;
+	font-weight: 700;
+	font-size: 0.85em;
+	margin-bottom: 4px;
+}
+
+.exp-card h4{
+	font-size: 0.78em;
+	line-height: 1.3;
+	color: #666;
+	font-weight: 400;
+	margin: 0;
+}
+
+/* Sub-roles within a card (Capital One, Citizens) */
+.exp-role-list{
+	margin-top: 8px;
+}
+
+.exp-role-item{
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	text-align: left;
+	padding: 6px 0;
+}
+
+.exp-role-item + .exp-role-item{
+	border-top: 1px solid #e8f0f4;
+}
+
+.exp-role-marker{
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #00B4D8;
+	flex-shrink: 0;
+	margin-top: 5px;
+}
+
+.exp-role-item h4{
+	font-size: 0.75em;
+	margin-bottom: 1px;
+}
+
+.exp-date{
+	font-size: 0.65em;
+	color: #aaa;
+}
+
+
 /* ---------------------------------
-8. EDUCATION SECTION
+8. EDUCATION & LEADERSHIP SECTION
 --------------------------------- */
 
-.education-wrapper{ position: relative; }
+.edu-lead-section{ background: #FAFAFA; }
 
-.education-wrapper:after{ content:''; position: absolute; top: 8px; bottom: 0; left: -51px;
-	width: 2px; background: #00AEFF; }
+.edu-row{
+	display: flex;
+	flex-wrap: wrap;
+}
 
-.education-wrapper .education{ position: relative; }
+.edu-entry{
+	display: flex;
+	gap: 16px;
+	padding: 20px 0;
+	border-bottom: 1px solid #e8e8e8;
+}
 
-.education-wrapper .education:after{ content:''; position: absolute; top: 8px; left: -58px; width: 16px; 
-	height: 16px; border-radius: 10px; z-index: 1;
-	box-shadow: 0 0 0 8px rgba(0,174,255, .4); background: #00AEFF; }
-	
-	
+.edu-entry:last-child{
+	border-bottom: none;
+}
+
+.edu-icon{
+	font-size: 1.8em;
+	line-height: 1;
+	flex-shrink: 0;
+	margin-top: 2px;
+}
+
+.edu-entry h4{
+	font-size: 1em;
+	margin-bottom: 3px;
+}
+
+.edu-entry h5{
+	font-size: 0.85em;
+	margin-bottom: 6px;
+}
+
+.edu-badges{
+	font-size: 0.85em !important;
+	color: #777 !important;
+	margin: 0;
+	line-height: 1.8;
+}
+
+.edu-tag{
+	display: inline-block;
+	background: #e8f4f8;
+	color: #0891b2;
+	font-size: 0.8em;
+	padding: 3px 10px;
+	border-radius: 20px;
+	margin: 2px 4px 2px 0;
+	font-weight: 500;
+}
+
+
 /* ---------------------------------
 9. COUNTER SECTION
 --------------------------------- */
 
-.counter-section{ position: relative; padding: 100px 0 70px; background-size: cover; z-index: 1; 
+.counter-section{ position: relative; padding: 100px 0 70px; background-size: cover; z-index: 1;
 	background-image: url(../../images/slider-2-1920x600.jpg); color: #fff; }
 
-.counter-section:after{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0; 
+.counter-section:after{ content:''; z-index: -1; position: absolute; top: 0; bottom: 0; left: 0;
 	right: 0; background: rgba(0,0,0, .2); }
 
 .counter{ position: relative; }
-	
+
 .counter .title{ text-align: right; margin-right: 130px; }
 
 .counter .desc{ position: absolute; bottom: 4px; right: 0px; width: 110px; }
 
 
-/* RADIAL PREOGRESS SECTION */
 
-
-.radial-progress{ position: relative; max-width: 200px; margin: 0 auto; }
-
-.radial-progress .progressbar-text{ font-size: 2.2em; font-weight: 500; 
-	padding-bottom: 25px!important; color: #333!important; }
-
-.radial-progress .progressbar-text:after{ content:'%'; }
-
-.radial-progress .progress-title{ position: absolute; top: 50%; left: 50%; width: 100%;
-	letter-spacing: 0; text-align: center; transform: translate(-50%, 15px); color: #777; }
-
-	
-	
 /* ---------------------------------
 10. FOOTER
 --------------------------------- */
 
-.copyright{ text-align: center; padding: 10px 0; background: #16435e; }
+.back-nav{
+	padding: 20px 0;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
 
+.back-btn{
+	font-size: 0.9em;
+	font-weight: 600;
+	color: #00B4D8;
+}
+
+.back-btn:hover{
+	color: #2D3436;
+}
+
+footer{ padding: 20px 0; background: #1a3a4a; }
+
+
+/* ---------------------------------
+11. SCROLL ANIMATIONS
+--------------------------------- */
+
+.fade-in{
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Section dividers */
+.section + .section{ border-top: 1px solid #eee; }
